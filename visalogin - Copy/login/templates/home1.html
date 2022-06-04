@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+  
+
+  
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+            integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <title>Visa Details</title>
+
+       
+        <style>
+            .page-heaader {
+                background: url("static/images/main_banner_bg.jpg") ;
+                background-attachment: fixed;
+                background-origin: initial;
+                background-clip: initial;
+                background-color: white;
+            }
+
+
+            .page-header-menu {
+                background: url("static/images/white_bg.png") !important;
+                height: 100px;
+                padding-left: 60px;
+
+            }
+
+
+
+            .card-overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: .5s ease;
+                background: rgba(0, 0, 0, 0.5);
+            }
+
+            .card:hover .card-overlay {
+                opacity: 1;
+            }
+
+            h3 {
+                width: 100%;
+                text-align: center;
+                border-bottom: 3px solid #055959;
+                line-height: 0.1em;
+
+                margin: 10px 0 20px;
+                color: #055959;
+            }
+
+            h3 span {
+                background: #fff;
+                padding: 0 10px;
+            }
+
+            .page-prefooter {
+                background-color: #383838;
+                color: #cccacb;
+                padding: 50px 0;
+                padding-top: 50px;
+                padding-right: 20px;
+                padding-bottom: 50px;
+                padding-left: 0px;
+            }
+
+            .page-prefooter h6 {
+                color: #bed24c !important;
+            }
+
+            .page-prefooter a {
+                color: #fff;
+            }
+
+            ul {
+                line-height: 25px !important;
+            }
+
+            .col-sm-6,
+            .col-md-3 {
+                word-wrap: break-word;
+            }
+
+            a:hover {
+                cursor: pointer;
+            }
+
+            .page-footer {
+                background: #055959;
+                color: #fff;
+            }
+
+            .page-sub-heaader-right {
+
+                padding: 0px;
+                padding-top: 10px;
+                padding-right: 0px;
+                padding-bottom: 10px;
+                padding-left: 0px;
+                line-height: 2em;
+                font-size: 15px;
+            }
+
+            .page-sub-heaader-left {
+
+                padding: 10px;
+                padding-top: 20px;
+                padding-right: 20px;
+                padding-bottom: 10px;
+                padding-left: 20px;
+                line-height: 2em;
+                font-size: 15px;
+            }
+        </style>
+    </head>
+
+    <body>
+        {% load static %}
+        <div class="page-heaader">
+            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#055959;">
+                <span class="navbar" style="color:#fff;">Wednesday 17/10/1443 | 18/05/2022 5:24:59 PM Local Time</span>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav navbar-nav ml-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="VisaSiteGuide.pdf">Help</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="technical.html">Technical Support</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="page-header-menu">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <img src="{% static 'images/MOFA_logo.png' %}" alt="Visa Services Platform" class="logo-default">
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#">The Ministry</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#">Saudi Foreign Policy</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#">Ministry Services</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#">Diplometic Missions</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#">Imformation</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#">Contact us</a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="page-head">
+                <div class="container">
+                    <div class="system-title">
+                        <h1 style="color:#fff;font-size: 30px;text-align:center;margin-top:20px;">
+                            Visa Services
+                            <br>
+                            Platform
+                        </h1>
+                    </div>
+                    <div class="container">
+                        <br> <a href="#">
+                            <p style="color: #fff;text-align:center;">Home</p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="page-title">
+              <h4 class="title">Visa Detail</h4>
+              <hr align="left" style="width:3%;height: 1px;color:#055959;background-color: #055959;">
+            </div>
+          </div>
+
+        <center>
+           <div class="container">
+                <form action="" method="post" class="details">
+                    <table class="table table-bordered" style="border: 1px inline black;width: 100%;">
+                    {% csrf_token %}
+     
+                        <tr>
+                            <th>Name </th>
+                            <td>{{emp.name}}</td>
+                        </tr>
+                        <tr>
+                            <th>Passport Id </th>
+                            <td>{{emp.passportid}}</td>
+                        </tr>
+                        <tr>
+                            <th>MoFa No </th>
+                            <td>{{emp.mofano}}</td>
+                        </tr>
+                        <tr>
+                            <th>Visa No </th>
+                            <td>{{emp.visano}}</td>
+                        </tr>
+                        <tr>
+                            <th>Visa Status</th>
+                            <td>{{emp.visastatus }}</td>
+                        </tr>
+                        <tr> 
+                            <th>Authorised</th>
+                            <td>{{emp.authorised }}</td>
+                        </tr>
+                    </table>
+                </form>
+           </div>
+        </center>
+        <div class="page-prefooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                        <img src="{% static 'images/mofa_footer_logo.png' %}" alt="Visa Services Platform">
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs12">
+                        <h6>SITEMAP</h6>
+                        <ul class="pricing-content list-unstyled" style="font-size:12px;">
+                            <li>
+                                <a target="_blank" rel="noreferrer" href="#">Ministry Addresses and Telephone
+                                    numbers</a>
+                            </li>
+                            <li>
+                                <a target="_blank" rel="noreferrer" href="#">Ministry branches inside Kindom</a>
+                            </li>
+                            <li><a target="_blank" rel="noreferrer" href="#">Suggestions and Complaints</a></li>
+                            <li><a target="_blank" rel="noreferrer" href="#">Privacy Policy</a></li>
+                            <li><a target="_blank" rel="noreferrer" href="#">Careers</a></li>
+                            <li><a target="_blank" rel="noreferrer" href="#">Tenders</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 ">
+                        <h6>MINISTRY SERVICES</h6>
+                        <ul class="pricing-content list-unstyled" style="font-size:12px;">
+                            <li><a target="_blank" rel="noreferrer" href="#">Visa Services</a></li>
+                            <li><a target="_blank" rel="noreferrer" href="#">Help for Saudi Nationals aboard</a></li>
+                            <li><a target="_blank" rel="noreferrer" href="#">Passport and Trip Details Registration</a>
+                            </li>
+                            <li><a target="_blank" rel="noreferrer" href="#">Attestation Guidline Services</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 col-sm-6 col-xs-12 footer-block">
+                        <h6>INFORMATION</h6>
+                        <ul class="pricing-content list-unstyled" style="font-size:12px;">
+                            <li><a target="_blank" rel="noreferrer" href="#">News</a></li>
+                            <li><a target="_blank" rel="noreferrer" href="#">Important issues</a></li>
+                            <li><a target="_blank" rel="noreferrer" href="#">Kingdom's Speeches in International
+                                    Forums</a></li>
+                            <li><a target="_blank" rel="noreferrer" href="#">Multimedia</a></li>
+                            <li><a target="_blank" rel="noreferrer" href="#">Events and Activities</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="page-sub-heaader-right">
+                            All Rights Reserved &nbsp;® 1426-1443 | 2005-2022. Ministry of Foreign Affairs &nbsp;&nbsp;©
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 text-right">
+                        <div class="page-sub-heaader-left">
+                            <h6>Follow Us</h6>
+                            <ul class="list-unstyled">
+                                <li><a target="_blank" rel="noreferrer" href="http://www.youtube.com/user/KSAMOFA"
+                                        title="click here to visit our page on youtube"><i
+                                            class="fa fa-youtube-play"></i></a></li>
+                                <li><a target="_blank" rel="noreferrer"
+                                        href="https://www.linkedin.com/company/ministry-of-foreign-affairs-saudi-arabia"
+                                        title="Click here to visit our page on linkedin"><i
+                                            class="fa fa-linkedin"></i></a></li>
+                                <li><a target="_blank" rel="noreferrer" href="http://twitter.com/KSAMOFA"
+                                        title="click here to visit our page on twitter"><i
+                                            class="fa fa-twitter"></i></a></li>
+                                <li><a target="_blank" rel="noreferrer"
+                                        href="http://www.facebook.com/pages/Ksamofa/187734237903479"
+                                        title="click here to visit our page on facebook"><i
+                                            class="fa fa-facebook"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+            crossorigin="anonymous"></script>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+            integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js></script>
+      
+    </body>
+</html>
